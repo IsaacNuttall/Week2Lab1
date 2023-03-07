@@ -70,11 +70,11 @@ greeting('Jake')
 */
 
 //CODE HERE
-const compareNums = (num1, num2) => {if(num1 > num2) {console.log(num1)}
+const compareNums = (num1, num2) => {if(num1 > num2) {return(num1)}
 else if(num2 > num1){
-  console.log(num2)
+  return(num2)
 } else if (num1 = num2){
-  console.log(num1, num2)
+  return(num1, num2)
 }}
 
 compareNums(5,8)
@@ -164,11 +164,11 @@ console.log('expression')
 //CODE HERE
 function nameCheck (name) {
   if(name === 'Steven') {
-    console.log('What is up Steven?')
+    return('What is up Steven?')
   } else if (name === 'Bryan') {
-    console.log('Hey Bryan!')
+    return('Hey Bryan!')
   } else {
-    console.log(`Cool name, ${NAMEPARAM}`)
+    return(`Cool name, ${NAMEPARAM}`)
   }
 }
 
@@ -186,13 +186,13 @@ let nameGreeting = nameCheck('Bryan')
 //CODE HERE
 function faveColorFinder (color) {
   if(color === 'red'){
-    console.log('red is a great color')
+    return('red is a great color')
   } else if (color === 'green') {
-    console.log('green is a solid favorite color')
+    return('green is a solid favorite color')
   } else if (color === 'black') {
-    console.log('so trendy')
+    return('so trendy')
   } else {
-    console.log('you need to evaluate your favorite color choice')
+    return('you need to evaluate your favorite color choice')
   }
 }
 
@@ -226,13 +226,14 @@ printAllNames (namesArr)
 //CODE HERE
 function thatsOdd (number) {
   if(number % 2 === 0) {
-    console.log("That's not odd!")
+    return("That's not odd!")
   } else {
-    console.log("That is odd indeed!")
+    return("That is odd indeed!")
   }
 }
 
-let oddChecker = thatsOdd (11)
+let oddChecker = thatsOdd(11)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -246,7 +247,7 @@ let oddChecker = thatsOdd (11)
 
 //CODE HERE
 const bestMovie = (title) => `${title} is the best movie ever!`
-console.log(bestMovie ('Sharknado'))
+return(bestMovie('Sharknado'))
  
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -306,7 +307,7 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 function toUpperCase(str) {
-  console.log(str.toUpperCase())
+  return(str.toUpperCase())
 }
 
   toUpperCase(sampleString)
@@ -325,14 +326,13 @@ function emailCheck (email) {
   toString(email)
   email.trim()
   if(email.includes('@')){
-    console.log('email verified')
+    return('email verified')
   } else {
-    console.log('must provide a valid email address')
+    return('must provide a valid email address')
   }
 }
 
-emailCheck ('@gmail.com')
-
+emailCheck ('@gmail.com')  
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -342,9 +342,11 @@ emailCheck ('@gmail.com')
 //CODE HERE
 
 function chocolateFrogs (goldCoins) {
-  (goldCoins)/3
+  return goldCoins / 3
 }
-totalFrogs = chocolateFrogs (18)
+
+let totalFrogs = chocolateFrogs(18)
+console.log('totalFrogs')
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -353,8 +355,8 @@ totalFrogs = chocolateFrogs (18)
 
 //CODE HERE
 function chocolateFrogs (goldCoins) {
-  (goldCoins)/3
-} + 2
+  return (goldCoins / 3) + 2
+}
 totalFrogs2 = chocolateFrogs (18)
 
 // function chocoFrogs(gold) {
@@ -373,19 +375,19 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-function ascending(array){
-  let asc = true;
-  for (let i = 0; i<array.length - 1;i++){
-    if (array[i+1]<=array[i]){
-      asc = false;
-      break
-    } else {
-      asc = true
-    }
-  }return asc
-}
-arrayIsAscending = ascending(sampleArray)
-console.log(arrayIsAscending)
+// function ascending(array){
+//   let asc = true;
+//   for (let i = 0; i<array.length - 1;i++){
+//     if (array[i+1]<=array[i]){
+//       asc = false;
+//       break
+//     } else {
+//       asc = true
+//     }
+//   }return asc
+// }
+// arrayIsAscending = ascending(sampleArray)
+// console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 22 ////////////////////
 
