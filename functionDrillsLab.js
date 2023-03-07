@@ -340,29 +340,31 @@ emailCheck ('@gmail.com')
 */
 
 //CODE HERE
-function chocoFrogs(gold) {
-  const totalFrogs = Math.floor(gold/3)
-  return totalFrogs
+
+function chocolateFrogs (goldCoins) {
+  (goldCoins)/3
 }
-
-let goldAmount = 15
-let totalFrogs = chocoFrogs(goldAmount)
-  console.log(With ${goldAmount} pieces of gold, you can buy ${totalFrogs} chocolate frogs!)
-
+totalFrogs = chocolateFrogs (18)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
-function chocoFrogs(gold) {
-  const totalFrogs = Math.floor(gold/3)
-  return totalFrogs
-}
 
-let goldAmount = 15
-let totalFrogs = chocoFrogs(goldAmount)
-  console.log(With ${goldAmount} pieces of gold, you can buy ${totalFrogs} chocolate frogs!)
+//CODE HERE
+function chocolateFrogs (goldCoins) {
+  (goldCoins)/3
+} + 2
+totalFrogs2 = chocolateFrogs (18)
+
+// function chocoFrogs(gold) {
+//   const totalFrogs = Math.floor(gold/3)
+//   return totalFrogs
+// }
+
+// let goldAmount = 15
+// let totalFrogs = chocoFrogs(goldAmount)
+//   console.log(With ${goldAmount} pieces of gold, you can buy ${totalFrogs} chocolate frogs!)
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -371,7 +373,19 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+function ascending(array){
+  let asc = true;
+  for (let i = 0; i<array.length - 1;i++){
+    if (array[i+1]<=array[i]){
+      asc = false;
+      break
+    } else {
+      asc = true
+    }
+  }return asc
+}
+arrayIsAscending = ascending(sampleArray)
+console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -395,13 +409,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["cute"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["squeaky"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["nautical"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["fluffy"]
